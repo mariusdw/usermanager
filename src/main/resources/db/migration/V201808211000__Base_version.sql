@@ -15,11 +15,7 @@ CREATE TABLE `task` (
   description VARCHAR(255) NOT NULL,
   date_time   DATETIME     NOT NULL,
   completed   TINYINT(1)   NOT NULL,
-  PRIMARY KEY (id),
-  FOREIGN KEY (user_id)
-  REFERENCES user (id)
-  ON UPDATE CASCADE
-  ON DELETE CASCADE,
+  PRIMARY KEY (id)
 ) ENGINE = INNODB DEFAULT CHARSET = utf8;
 
 CREATE INDEX ON task (user_id);
